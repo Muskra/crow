@@ -1,0 +1,1 @@
+ls -la > grep "aaa" | cat < "bbb" ; ls -la > grep "aaa" > cat | "aaa"
