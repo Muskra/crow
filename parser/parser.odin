@@ -91,7 +91,6 @@ to_reverse_polish_notation :: proc(tk_list: []Token) {
                                 append(&stack, op)
                             }
                         } else {
-                            fmt.println(tk.type, op, index)
                             shrink(&operands, index)
                             append(&operands, tk)
                             break
@@ -108,7 +107,7 @@ to_reverse_polish_notation :: proc(tk_list: []Token) {
         append(&stack, op)
     }
     for tk in stack {
-        fmt.print(tk.text, "")
+        fmt.printf("%s ", tk.text)
     }
     fmt.println("\n")
 }
